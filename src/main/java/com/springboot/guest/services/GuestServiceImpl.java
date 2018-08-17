@@ -25,14 +25,14 @@ public class GuestServiceImpl implements GuestService{
      }
 
 	@Override
-	@com.springboot.guest.annotations.LogHere 
+	@LogHere 
 	public Guest findByID(Long id) {
-		//logHereService.LogHere(new LogMethod());
+		//logHerein-memory data structure
 		return guestRepository.findById(id).orElse(null);
 	}
 
 	@Override
-	//@LogHere
+	@LogHere
 	public List<Guest> listAll() {
 		List<Guest> guestList = new ArrayList<Guest>();
 		guestRepository.findAll().forEach(guestList::add);

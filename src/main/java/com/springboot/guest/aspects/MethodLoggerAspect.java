@@ -15,7 +15,7 @@ public class MethodLoggerAspect {
     
    
     
-    @Around("@Annotation(com.springboot.guest.annotations.LogHere)")
+    @Around("@annotation(com.springboot.guest.annotations.LogHere)")
     public Object LogMethodInvocation(ProceedingJoinPoint joinPoint) throws Throwable{
     	log.info("Before method invocation");
     	Object methodInvocationAlert = null;
